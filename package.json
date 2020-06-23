@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-matrix-org",
+  "version": "0.1.0",
+  "description": "The js style ideals of the Matrix.org Foundation",
+  "main": "index.js",
+  "repository": "github.com/matrix-org/eslint-config-matrix",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-recommended": "^4.1.0",
+    "typescript": "^3.9.5"
+  }
+}
