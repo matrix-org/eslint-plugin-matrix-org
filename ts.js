@@ -15,9 +15,12 @@ module.exports = {
 
         "@typescript-eslint/explicit-module-boundary-types": ["off"],
         "@typescript-eslint/ban-types": ["off"],
- 
+
         // We use IProps and IState
         "@typescript-eslint/interface-name-prefix": ["off"],
+
+        // Require spaces after colons and around arrows
+        "@typescript-eslint/type-annotation-spacing": ["error"],
 
         // typescript-eslint has rules for semis. eslint's causes conflict
         "semi": ["off"],
