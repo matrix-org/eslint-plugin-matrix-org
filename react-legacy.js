@@ -9,7 +9,7 @@ module.exports = {
         },
     },
     rules: {
-        /** flowtype **/
+        // Flowtype
         "flowtype/require-parameter-type": ["warn", {
             "excludeArrowFunctions": true,
         }],
@@ -24,8 +24,8 @@ module.exports = {
         "flowtype/space-after-type-colon": ["warn", "always"],
         "flowtype/space-before-type-colon": ["warn", "never"],
 
-        // bind or arrow function in props causes performance issues
-        // (but we currently use them in some places)
+        // Bind or arrow functions in props causes performance issues (but we
+        // currently use them in some places).
         // It's disabled here, but we should using it sparingly.
         "react/jsx-no-bind": "off",
         "react/jsx-key": ["error"],

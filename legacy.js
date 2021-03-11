@@ -1,8 +1,8 @@
 /*
- * This is mostly intended for compatibility with matrix-js-sdk
+ * This is mostly intended for compatibility with `matrix-js-sdk`.
  * It has instances where these warnings are triggered.
- * New code is kept lint free by setting the max number
- * of warnings to a specific threshold
+ * New code is kept lint free by setting the max number of warnings to a
+ * specific threshold, and evetually we should drive that to 0.
  */
 
 module.exports = {
