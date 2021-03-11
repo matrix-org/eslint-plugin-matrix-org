@@ -1,7 +1,7 @@
 {
     "name": "eslint-config-matrix-org",
     "version": "0.2.0",
-    "description": "The js style ideals of the Matrix.org Foundation",
+    "description": "ESLint rules and configs used by Matrix.org projects",
     "keywords": [
         "eslint"
     ],
