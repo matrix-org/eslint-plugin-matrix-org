@@ -1,7 +1,7 @@
 module.exports = {
     extends: ["eslint:recommended", "google"],
 
-    parser: "babel-eslint", // Needed for class properties
+    parser: "@babel/eslint-parser", // Needed for class properties
     parserOptions: {
         sourceType: "module",
     },
@@ -13,7 +13,7 @@ module.exports = {
     },
 
     plugins: [
-      "babel",
+      "@babel",
     ],
 
     rules: {
@@ -73,6 +73,6 @@ module.exports = {
         // ESLint's built in `no-invalid-this` rule breaks with class properties
         "no-invalid-this": "off",
         // ...so we replace it with a version that is class property aware
-        "babel/no-invalid-this": "error",
+        "@babel/no-invalid-this": "error",
     },
 }
