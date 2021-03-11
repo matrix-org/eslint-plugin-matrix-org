@@ -7,7 +7,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
     ],
     rules: {
-        // Allow the use of underscore to show args are not used
+        // Allow the use of underscore to show args are not used.
         // This is helpful for seeing that a function implements
         // an interface but won't be using one of it's arguments.
         "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
@@ -22,11 +22,11 @@ module.exports = {
         // Require spaces after colons and around arrows
         "@typescript-eslint/type-annotation-spacing": ["error"],
 
-        // typescript-eslint has rules for semis. eslint's causes conflict
+        // `typescript-eslint` has a rule for semis which conflicts with the
+        // original ESLint core rule.
         "semi": ["off"],
 
-        // Seems like we're relying on ts' types and going with more adhoc
-        // js docs as of late
+        // We're relying on TS types and going with more ad hoc JS docs
         "valid-jsdoc": ["off"],
 
     }
