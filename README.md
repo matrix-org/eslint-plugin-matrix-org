@@ -71,3 +71,18 @@ Standard TypeScript with React
     ]
 }
 ```
+
+This package does not hold any dependencies itself, as it causes conflicts the
+versions of the same dependencies downstream and also would imply installing the
+union of all tools. You should expect that you may need to add some of the
+following depending on the configs you enable:
+
+* @babel/core
+* @babel/eslint-parser
+* @babel/eslint-plugin
+* @typescript-eslint/eslint-plugin
+* @typescript-eslint/parser
+* eslint-config-google
+* eslint-plugin-react
+* eslint-plugin-react-hooks
+* typescript
