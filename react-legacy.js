@@ -1,8 +1,9 @@
 module.exports = {
-    extends: "./react",
     plugins: [
         "flowtype",
+        "matrix-org",
     ],
+    extends: "plugin:matrix-org/react",
     parserOptions: {
         ecmaFeatures: {
             legacyDecorators: true,

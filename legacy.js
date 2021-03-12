@@ -6,8 +6,8 @@
  */
 
 module.exports = {
-    extends: ".",
-
+    plugins: ["matrix-org"],
+    extends: "plugin:matrix-org/javascript",
     rules: {
         "no-var": ["warn"],
         "prefer-rest-params": ["warn"],

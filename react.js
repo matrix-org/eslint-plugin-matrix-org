@@ -1,7 +1,8 @@
 module.exports = {
     plugins: [
-      "react",
-      "react-hooks",
+        "matrix-org",
+        "react",
+        "react-hooks",
     ],
     parserOptions: {
         ecmaFeatures: {

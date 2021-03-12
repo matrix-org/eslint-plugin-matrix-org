@@ -1,69 +1,79 @@
-# eslint-config-matrix-org
+# eslint-plugin-matrix-org
 
-`eslint-config-matrix-org` contains ESLint rules and configs used by Matrix.org
+`eslint-plugin-matrix-org` contains ESLint rules and configs used by Matrix.org
 projects. It codifies
 https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md.
 
 This package contains five ESLint configs:
 
-- `matrix-org`: The style for JS projects.
+- `matrix-org/javascript`: The style for JavaScript projects.
 - `matrix-org/react`: The style for React projects. Intended to be used in
-  conjunction with `matrix-org` or `matrix-org/ts`.
+  conjunction with `matrix-org/javascript` or `matrix-org/typescript`.
 - `matrix-org/legacy`: The style adhered to by established projects before ES6,
-  namely `matrix-js-sdk`. It extends `matrix-org`. DEPRECATED - DO NOT USE
+  namely `matrix-js-sdk`. It extends `matrix-org/javascript`.
+  DEPRECATED - DO NOT USE
 - `matrix-org/react-legacy`: Styling for React projects using Flowtype instead
-  of TS. Intended to be phased out. It extends `matrix-org/react`. DEPRECATED -
-  DO NOT USE
-- `matrix-org/ts`: The style for TS projects. It extends `matrix-org`.
+  of TypeScript. Intended to be phased out. It extends `matrix-org/react`.
+  DEPRECATED - DO NOT USE
+- `matrix-org/typescript`: The style for TypeScript projects. It extends
+  `matrix-org/javascript`.
 
-# Development
+# Getting started
 
-To test it out, in this repo run:
-```
-yarn link
-```
+Add this package as a development dependency:
 
-In the target repo run:
 ```
-yarn link eslint-config-matrix-org
+yarn add eslint-plugin-matrix-org --dev
 ```
 
-And add any of the following to your ESLint config:
+You can then add any of the following to your ESLint config:
 
-Standard JS style
+Standard JavaScript style
 ```js
 {
-    extends: [
+    plugins: [
         "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/javascript",
     ]
 }
 ```
 
-Standard TS style
+Standard TypeScript style
 ```js
 {
-    extends: [
-        "matrix-org/ts",
-    ]
-}
-```
-
-Standard JS with React
-```js
-{
-    extends: [
+    plugins: [
         "matrix-org",
-        "matrix-org/react",
+    ],
+    extends: [
+        "plugin:matrix-org/typescript",
     ]
 }
 ```
 
-Standard TS with React
+Standard JavaScript with React
 ```js
 {
+    plugins: [
+        "matrix-org",
+    ],
     extends: [
-        "matrix-org/ts",
-        "matrix-org/react",
+        "plugin:matrix-org/javascript",
+        "plugin:matrix-org/react",
+    ]
+}
+```
+
+Standard TypeScript with React
+```js
+{
+    plugins: [
+        "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/typescript",
+        "plugin:matrix-org/react",
     ]
 }
 ```
