@@ -9,12 +9,6 @@ This package contains five ESLint configs:
 - `matrix-org/javascript`: The style for JavaScript projects.
 - `matrix-org/react`: The style for React projects. Intended to be used in
   conjunction with `matrix-org/javascript` or `matrix-org/typescript`.
-- `matrix-org/legacy`: The style adhered to by established projects before ES6,
-  namely `matrix-js-sdk`. It extends `matrix-org/javascript`.
-  DEPRECATED - DO NOT USE
-- `matrix-org/react-legacy`: Styling for React projects using Flowtype instead
-  of TypeScript. Intended to be phased out. It extends `matrix-org/react`.
-  DEPRECATED - DO NOT USE
 - `matrix-org/typescript`: The style for TypeScript projects. It extends
   `matrix-org/javascript`.
 
