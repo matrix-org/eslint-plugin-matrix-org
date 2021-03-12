@@ -1,23 +1,24 @@
 # eslint-config-matrix-org
 
-eslint-config-matrix-org is the ideal style adhered to by matrixorg projects.
+`eslint-config-matrix-org` contains ESLint rules and configs used by Matrix.org
+projects. It codifies
+https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md.
 
-It codifies https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md
+This package contains five ESLint configs:
 
-This package contains five styles:
-
-- `matrixorg`: The style for js projects.
-- `matrixorg/react`: The style for react based projects. Intended to be used in conjunction with `matrixorg` or `matrixorg/ts`.
-- `matrixorg/legacy`: The style adhered to by established projects making use pre es6, namely `matrix-js-sdk`. It extends `matrixorg`. DEPRECATED - DO NOT USE
-- `matrixorg/react-legacy`: Styling for react projects using flowtype instead of ts. Intended to be phased out. It extends `matrixorg/react`. DEPRECATED - DO NOT USE
-- `matrixorg/ts`: The style for ts projects. It extends `matrixorg`.
-
+- `matrix-org`: The style for JS projects.
+- `matrix-org/react`: The style for React projects. Intended to be used in
+  conjunction with `matrix-org` or `matrix-org/ts`.
+- `matrix-org/legacy`: The style adhered to by established projects before ES6,
+  namely `matrix-js-sdk`. It extends `matrix-org`. DEPRECATED - DO NOT USE
+- `matrix-org/react-legacy`: Styling for React projects using Flowtype instead
+  of TS. Intended to be phased out. It extends `matrix-org/react`. DEPRECATED -
+  DO NOT USE
+- `matrix-org/ts`: The style for TS projects. It extends `matrix-org`.
 
 # Development
 
-To test it out
-
-In this repo run:
+To test it out, in this repo run:
 ```
 yarn link
 ```
@@ -27,9 +28,9 @@ In the target repo run:
 yarn link eslint-config-matrix-org
 ```
 
-And add any of the following to your eslint:
+And add any of the following to your ESLint config:
 
-Standard js style
+Standard JS style
 ```js
 {
     extends: [
@@ -38,7 +39,7 @@ Standard js style
 }
 ```
 
-Standard ts style
+Standard TS style
 ```js
 {
     extends: [
@@ -47,7 +48,7 @@ Standard ts style
 }
 ```
 
-Standard js with react
+Standard JS with React
 ```js
 {
     extends: [
@@ -57,7 +58,7 @@ Standard js with react
 }
 ```
 
-Standard ts with react
+Standard TS with React
 ```js
 {
     extends: [
