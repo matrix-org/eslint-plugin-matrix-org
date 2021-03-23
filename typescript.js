@@ -1,11 +1,14 @@
 module.exports = {
-    "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
-    "extends": [
-        ".",
+    plugins: [
+        "@typescript-eslint",
+        "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/javascript",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
     ],
+    parser: "@typescript-eslint/parser",
     rules: {
         // Allow the use of underscore to show args are not used.
         // This is helpful for seeing that a function implements

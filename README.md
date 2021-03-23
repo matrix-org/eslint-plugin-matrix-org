@@ -1,68 +1,88 @@
-# eslint-config-matrix-org
+# eslint-plugin-matrix-org
 
-eslint-config-matrix-org is the ideal style adhered to by matrixorg projects.
+`eslint-plugin-matrix-org` contains ESLint rules and configs used by Matrix.org
+projects. It codifies
+https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md.
 
-It codifies https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md
+This package contains five ESLint configs:
 
-This package contains five styles:
+- `matrix-org/javascript`: The style for JavaScript projects.
+- `matrix-org/react`: The style for React projects. Intended to be used in
+  conjunction with `matrix-org/javascript` or `matrix-org/typescript`.
+- `matrix-org/typescript`: The style for TypeScript projects. It extends
+  `matrix-org/javascript`.
 
-- `matrixorg`: The style for js projects.
-- `matrixorg/react`: The style for react based projects. Intended to be used in conjunction with `matrixorg` or `matrixorg/ts`.
-- `matrixorg/legacy`: The style adhered to by established projects making use pre es6, namely `matrix-js-sdk`. It extends `matrixorg`. DEPRECATED - DO NOT USE
-- `matrixorg/react-legacy`: Styling for react projects using flowtype instead of ts. Intended to be phased out. It extends `matrixorg/react`. DEPRECATED - DO NOT USE
-- `matrixorg/ts`: The style for ts projects. It extends `matrixorg`.
+# Getting started
 
+Add this package as a development dependency:
 
-# Development
-
-To test it out
-
-In this repo run:
 ```
-yarn link
+yarn add eslint-plugin-matrix-org --dev
 ```
 
-In the target repo run:
-```
-yarn link eslint-config-matrix-org
-```
+You can then add any of the following to your ESLint config:
 
-And add any of the following to your eslint:
-
-Standard js style
+Standard JavaScript style
 ```js
 {
-    extends: [
+    plugins: [
         "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/javascript",
     ]
 }
 ```
 
-Standard ts style
+Standard TypeScript style
 ```js
 {
-    extends: [
-        "matrix-org/ts",
-    ]
-}
-```
-
-Standard js with react
-```js
-{
-    extends: [
+    plugins: [
         "matrix-org",
-        "matrix-org/react",
+    ],
+    extends: [
+        "plugin:matrix-org/typescript",
     ]
 }
 ```
 
-Standard ts with react
+Standard JavaScript with React
 ```js
 {
+    plugins: [
+        "matrix-org",
+    ],
     extends: [
-        "matrix-org/ts",
-        "matrix-org/react",
+        "plugin:matrix-org/javascript",
+        "plugin:matrix-org/react",
     ]
 }
 ```
+
+Standard TypeScript with React
+```js
+{
+    plugins: [
+        "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/typescript",
+        "plugin:matrix-org/react",
+    ]
+}
+```
+
+This package does not hold any dependencies itself, as it causes conflicts the
+versions of the same dependencies downstream and also would imply installing the
+union of all tools. You should expect that you may need to add some of the
+following depending on the configs you enable:
+
+* @babel/core
+* @babel/eslint-parser
+* @babel/eslint-plugin
+* @typescript-eslint/eslint-plugin
+* @typescript-eslint/parser
+* eslint-config-google
+* eslint-plugin-react
+* eslint-plugin-react-hooks
+* typescript

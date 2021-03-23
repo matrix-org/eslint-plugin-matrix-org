@@ -1,5 +1,5 @@
 {
-    "name": "eslint-config-matrix-org",
+    "name": "eslint-plugin-matrix-org",
     "version": "0.2.0",
     "description": "ESLint rules and configs used by Matrix.org projects",
     "keywords": [
@@ -16,12 +16,5 @@
         "url": "https://github.com/matrix-org/eslint-config-matrix-org/issues"
     },
     "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^4.14.0",
-        "@typescript-eslint/parser": "^4.14.0",
-        "babel-eslint": "^10.1.0",
-        "eslint-config-google": "^0.14.0",
-        "eslint-config-recommended": "^4.1.0",
-        "eslint-plugin-babel": "^5.3.1",
-        "typescript": "^4.1.3"
     }
 }
