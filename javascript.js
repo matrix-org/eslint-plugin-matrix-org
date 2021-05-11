@@ -75,5 +75,6 @@ module.exports = {
         "@babel/no-invalid-this": "error",
 
         "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "object-curly-spacing": ["error", "always"]
     },
 }
