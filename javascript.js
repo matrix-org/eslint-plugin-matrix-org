@@ -73,5 +73,7 @@ module.exports = {
         "no-invalid-this": "off",
         // ...so we replace it with a version that is class property aware
         "@babel/no-invalid-this": "error",
+
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
     },
 }
