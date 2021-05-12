@@ -4,7 +4,7 @@
 projects. It codifies
 https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md.
 
-This package contains five ESLint configs:
+This package contains several ESLint configs:
 
 - `matrix-org/javascript`: The style for JavaScript projects.
 - `matrix-org/react`: The style for React projects. Intended to be used in
