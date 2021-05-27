@@ -32,5 +32,8 @@ module.exports = {
         // We're relying on TS types and going with more ad hoc JS docs
         "valid-jsdoc": ["off"],
 
+        // Replace base ESLint's `no-invalid-this` with TS aware version
+        "no-invalid-this": ["off"],
+        "@typescript-eslint/no-invalid-this": ["error"],
     }
 }
