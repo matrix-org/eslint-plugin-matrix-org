@@ -4,13 +4,17 @@
 projects. It codifies
 https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md.
 
-This package contains several ESLint configs:
+This package contains several main ESLint configs for different project styles:
 
-- `matrix-org/javascript`: The style for JavaScript projects.
-- `matrix-org/react`: The style for React projects. Intended to be used in
-  conjunction with `matrix-org/javascript` or `matrix-org/typescript`.
+- `matrix-org/javascript`: The style for native JavaScript projects.
+- `matrix-org/babel`: The style for Babel JavaScript projects. It extends
+  `matrix-org/javascript`.
 - `matrix-org/typescript`: The style for TypeScript projects. It extends
   `matrix-org/javascript`.
+
+There is also a mixin config that can be used together with any of the above:
+
+- `matrix-org/react`: The style for React projects.
 
 # Getting started
 
@@ -22,7 +26,7 @@ yarn add eslint-plugin-matrix-org --dev
 
 You can then add any of the following to your ESLint config:
 
-Standard JavaScript style
+Standard native JavaScript
 ```js
 {
     plugins: [
@@ -34,7 +38,19 @@ Standard JavaScript style
 }
 ```
 
-Standard TypeScript style
+Standard Babel JavaScript
+```js
+{
+    plugins: [
+        "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/babel",
+    ]
+}
+```
+
+Standard TypeScript
 ```js
 {
     plugins: [
@@ -46,7 +62,7 @@ Standard TypeScript style
 }
 ```
 
-Standard JavaScript with React
+Standard native JavaScript with React
 ```js
 {
     plugins: [
@@ -54,6 +70,19 @@ Standard JavaScript with React
     ],
     extends: [
         "plugin:matrix-org/javascript",
+        "plugin:matrix-org/react",
+    ]
+}
+```
+
+Standard Babel JavaScript with React
+```js
+{
+    plugins: [
+        "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/babel",
         "plugin:matrix-org/react",
     ]
 }
