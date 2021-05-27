@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-matrix-org",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "ESLint rules and configs used by Matrix.org projects",
     "keywords": [
         "eslint"
