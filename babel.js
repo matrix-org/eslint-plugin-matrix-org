@@ -6,7 +6,6 @@ module.exports = {
     extends: [
         "plugin:matrix-org/javascript",
     ],
-
     parser: "@babel/eslint-parser", // Needed for class properties
     parserOptions: {
         sourceType: "module",
