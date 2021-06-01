@@ -28,6 +28,7 @@ module.exports = {
         // `typescript-eslint` has a rule for semis which conflicts with the
         // original ESLint core rule.
         "semi": ["off"],
+        "@typescript-eslint/semi": ["error"],
 
         // We're relying on TS types and going with more ad hoc JS docs
         "valid-jsdoc": ["off"],
