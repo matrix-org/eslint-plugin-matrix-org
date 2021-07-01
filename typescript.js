@@ -30,6 +30,18 @@ module.exports = {
         "semi": ["off"],
         "@typescript-eslint/semi": ["error"],
 
+        // Similarly, enforce semicolons between members (ie. in types / interfaces)
+        "@typescript-eslint/member-delimiter-style": ["error", {
+            "multiline": {
+                "delimiter": "semi",
+                "requireLast": true,
+            },
+            "singleline": {
+                "delimiter": "comma",
+                "requireLast": false,
+            },
+        }],
+
         // We're relying on TS types and going with more ad hoc JS docs
         "valid-jsdoc": ["off"],
 
