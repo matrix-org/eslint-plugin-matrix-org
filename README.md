@@ -111,6 +111,7 @@ following depending on the configs you enable:
 * @babel/eslint-plugin
 * @typescript-eslint/eslint-plugin
 * @typescript-eslint/parser
+* eslint
 * eslint-config-google
 * eslint-plugin-react
 * eslint-plugin-react-hooks
