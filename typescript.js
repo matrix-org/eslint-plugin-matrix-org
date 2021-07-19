@@ -48,5 +48,42 @@ module.exports = {
         // Replace base ESLint's `no-invalid-this` with TS aware version
         "no-invalid-this": ["off"],
         "@typescript-eslint/no-invalid-this": ["error"],
+
+        // XXX: for now the enum, enumMember, property and more have been disabled as there are too many violations
+        "@typescript-eslint/naming-convention": ["error", {
+            selector: [
+                // "variableLike",
+                // "property",
+                "parameterProperty",
+                "classMethod",
+                "typeMethod",
+                "classMethod",
+                "typeMethod",
+                "accessor",
+            ],
+            format: ["camelCase"],
+            leadingUnderscore: "forbid",
+        }, {
+            selector: ["function", "parameter", "objectLiteralMethod"],
+            format: ["camelCase", "PascalCase"],
+            leadingUnderscore: "allow",
+        }, {
+            selector: [
+                "class",
+                "typeAlias",
+                // "enum",
+                // "enumMember",
+                "typeParameter",
+            ],
+            format: ["PascalCase"],
+            leadingUnderscore: "forbid",
+            // }, {
+            //     selector: "interface",
+            //     format: ["PascalCase"],
+            //     custom: {
+            //         regex: "^I[A-Z]",
+            //         match: true,
+            //     },
+        }],
     }
 }
