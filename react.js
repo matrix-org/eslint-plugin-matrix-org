@@ -32,6 +32,16 @@ module.exports = {
         // https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-tag-spacing.md
         "react/jsx-tag-spacing": ["error"],
 
+        "react/jsx-curly-spacing": ["error", {
+            allowMultiline: true,
+            children: { when: "always" },
+            attributes: { when: "never" },
+        }],
+
+        "react/jsx-curly-brace-presence": ["error", "never"],
+
+        "react/jsx-equals-spacing": ["error", "never"],
+
         "react-hooks/rules-of-hooks": ["error"],
         "react-hooks/exhaustive-deps": ["error"],
     }
