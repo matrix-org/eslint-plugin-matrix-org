@@ -48,7 +48,6 @@ module.exports = {
         "no-prototype-builtins": ["off"],
 
         // Rules we do not want from the Google style guide
-        "object-curly-spacing": ["off"],
         "spaced-comment": ["off"],
         "guard-for-in": ["off"],
         "brace-style": ["error", "1tbs", {"allowSingleLine": true}],
@@ -58,6 +57,6 @@ module.exports = {
         "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
 
         "no-multiple-empty-lines": ["error", { "max": 1 }],
-        "object-curly-spacing": ["error", "always"]
+        "object-curly-spacing": ["error", "always"],
     },
 }
