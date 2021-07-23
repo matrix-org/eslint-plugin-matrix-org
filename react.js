@@ -30,7 +30,9 @@ module.exports = {
         // or after the closing slash, and no spacing after the opening
         // bracket of the opening tag or closing tag.
         // https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-tag-spacing.md
-        "react/jsx-tag-spacing": ["error"],
+        "react/jsx-tag-spacing": ["error", {
+            beforeClosing: "never",
+        }],
 
         "react/jsx-curly-spacing": ["error", {
             allowMultiline: true,
@@ -41,6 +43,11 @@ module.exports = {
         "react/jsx-curly-brace-presence": ["error", "never"],
 
         "react/jsx-equals-spacing": ["error", "never"],
+
+        "react/no-direct-mutation-state": ["error"],
+        "react/no-this-in-sfc": ["error"],
+        "react/self-closing-comp": ["error"],
+        "react/jsx-max-props-per-line": ["error", {"when": "multiline"}],
 
         "react-hooks/rules-of-hooks": ["error"],
         "react-hooks/exhaustive-deps": ["error"],
