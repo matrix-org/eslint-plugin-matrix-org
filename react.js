@@ -51,5 +51,6 @@ module.exports = {
 
         "react-hooks/rules-of-hooks": ["error"],
         "react-hooks/exhaustive-deps": ["error"],
+        "react/no-unknown-property": ["error"],
     }
 }
