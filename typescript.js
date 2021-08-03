@@ -10,14 +10,6 @@ module.exports = {
     ],
     parser: "@typescript-eslint/parser",
     rules: {
-        "indent": ["off"],
-        "@typescript-eslint/indent": [
-            "error",
-            4,
-            {
-                SwitchCase: 1,
-            },
-        ],
         // Allow the use of underscore to show args are not used.
         // This is helpful for seeing that a function implements
         // an interface but won't be using one of it's arguments.
