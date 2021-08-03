@@ -10,8 +10,6 @@ module.exports = {
             4,
             {
                 SwitchCase: 1,
-                ArrayExpression: "off",
-                ObjectExpression: "off",
             },
         ],
         "max-len": ["error", {
