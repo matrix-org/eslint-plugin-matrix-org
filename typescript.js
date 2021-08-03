@@ -16,8 +16,6 @@ module.exports = {
             4,
             {
                 SwitchCase: 1,
-                ArrayExpression: "off",
-                ObjectExpression: "off",
             },
         ],
         // Allow the use of underscore to show args are not used.
