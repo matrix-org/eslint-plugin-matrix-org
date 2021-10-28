@@ -1,4 +1,5 @@
 module.exports = {
+    plugins: ["import"],
     extends: [
         "eslint:recommended",
         "google",
@@ -56,5 +57,13 @@ module.exports = {
 
         "no-multiple-empty-lines": ["error", { "max": 1 }],
         "object-curly-spacing": ["error", "always"],
+
+        "import/order": [
+            "error", {
+                "groups": [["builtin", "external"], ["internal", "parent", "sibling", "index", "object", "type"]],
+                "newlines-between": "always",
+            },
+        ],
+        "import/first": "error",
     },
 }
