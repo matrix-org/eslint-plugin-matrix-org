@@ -115,4 +115,5 @@ following depending on the configs you enable:
 * eslint-config-google
 * eslint-plugin-react
 * eslint-plugin-react-hooks
+* eslint-plugin-import
 * typescript
