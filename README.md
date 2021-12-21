@@ -101,6 +101,20 @@ Standard TypeScript with React
 }
 ```
 
+Standard TypeScript with React and jsx a11y
+```js
+{
+    plugins: [
+        "matrix-org",
+    ],
+    extends: [
+        "plugin:matrix-org/typescript",
+        "plugin:matrix-org/react",
+        "plugin:matrix-org/a11y"
+    ]
+}
+```
+
 This package does not hold any dependencies itself, as it causes conflicts the
 versions of the same dependencies downstream and also would imply installing the
 union of all tools. You should expect that you may need to add some of the
@@ -113,6 +127,7 @@ following depending on the configs you enable:
 * @typescript-eslint/parser
 * eslint
 * eslint-config-google
+* eslint-plugin-jsx-a11y
 * eslint-plugin-react
 * eslint-plugin-react-hooks
 * eslint-plugin-import
