@@ -27,6 +27,7 @@ module.exports = {
             functions: "always-multiline",
         }],
         "arrow-parens": ["off"],
+        "space-in-parens": ["error"],
 
         // Loosen JSDoc requirements a little
         "require-jsdoc": ["error", {
