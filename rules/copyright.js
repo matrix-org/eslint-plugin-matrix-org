@@ -15,7 +15,7 @@ module.exports = {
                     return;
                 }
 
-                const headComments = code.getCommentsBefore(firstToken || node);
+                const headComments = code.getCommentsBefore(firstToken);
                 const hasSomeCopyrightHeader = headComments?.some(comment => comment?.value?.includes('Copyright'));
                 if (hasSomeCopyrightHeader) {
                     return;
