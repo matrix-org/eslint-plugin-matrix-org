@@ -1,5 +1,5 @@
 module.exports = {
     rules: {
-        "include-copyright-header": "error"
+        "matrix-org/include-copyright-header": "error",
     },
 };
