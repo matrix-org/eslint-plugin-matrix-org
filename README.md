@@ -115,6 +115,22 @@ Standard TypeScript with React and jsx a11y
 }
 ```
 
+To require a copyright header:
+```js
+{
+    plugins: [
+        "matrix-org",
+    ],
+    rules: [
+        "matrix-org/require-copyright-header": "error",
+        // provide a header template as a string to insert on --fix
+        // the current year can be inserted into the template with the placeholder `%%CURRENT_YEAR%%`
+        "matrix-org/require-copyright-header": ["error", HEADER_TEMPLATE]
+    ]
+}
+```
+
+
 This package does not hold any dependencies itself, as it causes conflicts the
 versions of the same dependencies downstream and also would imply installing the
 union of all tools. You should expect that you may need to add some of the
