@@ -15,8 +15,5 @@
     "bugs": {
         "url": "https://github.com/matrix-org/eslint-config-matrix-org/issues"
     },
-    "dependencies": {},
-    "peerDependencies": {
-        "eslint-plugin-jsx-a11y": "^6.5.1"
-    }
+    "dependencies": {}
 }
