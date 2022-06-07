@@ -148,3 +148,9 @@ following depending on the configs you enable:
 * eslint-plugin-react-hooks
 * eslint-plugin-import
 * typescript
+
+## Releasing
+
+Use "[Run workflow](https://github.com/matrix-org/eslint-plugin-matrix-org/actions/workflows/release.yaml)".
+Refer to [SemVer](https://semver.org/) for versioning semantics.
+This workflow will bump the version, publish NPM, and create a GitHub release.
