@@ -53,7 +53,7 @@ module.exports = {
         "guard-for-in": ["off"],
         "brace-style": ["error", "1tbs", {"allowSingleLine": true}],
         "block-spacing": ["off"],
-        "operator-linebreak": ["off"],
+        "operator-linebreak": ["error", "after", { overrides: { '?': 'before', ':': 'before' } }],
         // We don't mind strange alignments in EOL comments
         "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
 
