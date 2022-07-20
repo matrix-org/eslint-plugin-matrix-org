@@ -143,6 +143,7 @@ following depending on the configs you enable:
 * @typescript-eslint/parser
 * eslint
 * eslint-config-google
+* eslint-plugin-deprecate
 * eslint-plugin-jsx-a11y
 * eslint-plugin-react
 * eslint-plugin-react-hooks
