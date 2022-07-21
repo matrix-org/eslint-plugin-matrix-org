@@ -13,11 +13,7 @@ module.exports = {
         // Allow the use of underscore to show args are not used.
         // This is helpful for seeing that a function implements
         // an interface but won't be using one of it's arguments.
-        "@typescript-eslint/no-unused-vars": ["error", {
-            "args": "none",
-            "destructuredArrayIgnorePattern": "^_",
-            "ignoreRestSiblings": true,
-        }],
+        "@typescript-eslint/no-unused-vars": ["error", { "args": "none", "ignoreRestSiblings": true }],
         "@typescript-eslint/no-empty-function": ["off"],
 
         "@typescript-eslint/explicit-module-boundary-types": ["off"],
