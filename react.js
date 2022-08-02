@@ -1,5 +1,6 @@
 module.exports = {
     plugins: [
+        "deprecate",
         "matrix-org",
         "react",
         "react-hooks",
@@ -52,5 +53,10 @@ module.exports = {
         "react-hooks/rules-of-hooks": ["error"],
         "react-hooks/exhaustive-deps": ["error"],
         "react/no-unknown-property": ["error"],
+
+        "deprecate/import": ["warn", {
+            name: "enzyme",
+            use: "@testing-library/react",
+        }],
     }
 }
