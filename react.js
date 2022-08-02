@@ -54,7 +54,7 @@ module.exports = {
         "react-hooks/exhaustive-deps": ["error"],
         "react/no-unknown-property": ["error"],
 
-        "deprecate/import": ["warn", {
+        "deprecate/import": ["error", {
             name: "enzyme",
             use: "@testing-library/react",
         }],
