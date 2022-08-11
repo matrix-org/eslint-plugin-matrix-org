@@ -17,7 +17,7 @@ module.exports = {
             code: 120,
             ignoreComments: true,
         }],
-        "curly": ["error", "multi-line"],
+        "curly": ["error", "all"],
         "prefer-const": ["error"],
         "comma-dangle": ["error", {
             arrays: "always-multiline",
