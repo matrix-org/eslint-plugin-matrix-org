@@ -2,7 +2,7 @@
 
 `eslint-plugin-matrix-org` contains ESLint rules and configs used by Matrix.org
 projects. It codifies
-https://github.com/matrix-org/matrix-react-sdk/blob/develop/code_style.md.
+https://github.com/vector-im/element-web/blob/develop/code_style.md.
 
 This package contains several main ESLint configs for different project styles:
 
