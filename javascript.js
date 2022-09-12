@@ -56,11 +56,6 @@ module.exports = {
         "operator-linebreak": ["off"],
         // We don't mind strange alignments in EOL comments
         "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
-        "no-mixed-operators": ["error", {
-            "groups": [
-                ["&&", "||"],
-            ],
-        }],
 
         "no-multiple-empty-lines": ["error", { "max": 1 }],
         "object-curly-spacing": ["error", "always"],
@@ -72,5 +67,14 @@ module.exports = {
             },
         ],
         "import/first": "error",
+
+        "no-mixed-operators": ["error", {
+            "groups": [
+                ["&&", "||"],
+            ],
+        }],
+        "quotes": ["error", "double", {
+            "avoidEscape": true,
+        }],
     },
 }
