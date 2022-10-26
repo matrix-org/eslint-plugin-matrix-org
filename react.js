@@ -11,7 +11,7 @@ module.exports = {
         },
     },
     rules: {
-        "max-len": ["warn", {
+        "max-len": ["error", {
             // Ignore pure JSX lines
             ignorePattern: '^\\s*<',
             ignoreComments: true,
@@ -48,7 +48,7 @@ module.exports = {
         "react/no-direct-mutation-state": ["error"],
         "react/no-this-in-sfc": ["error"],
         "react/self-closing-comp": ["error"],
-        "react/jsx-max-props-per-line": ["error", {"when": "multiline"}],
+        "react/jsx-max-props-per-line": ["error", { "when": "multiline" }],
 
         "react-hooks/rules-of-hooks": ["error"],
         "react-hooks/exhaustive-deps": ["error"],
