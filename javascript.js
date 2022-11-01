@@ -1,5 +1,5 @@
 module.exports = {
-    plugins: ["import"],
+    plugins: ["import", "unicorn"],
     extends: [
         "eslint:recommended",
         "google",
@@ -67,5 +67,6 @@ module.exports = {
             },
         ],
         "import/first": "error",
+        "unicorn/no-instanceof-array": "error",
     },
 }
