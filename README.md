@@ -148,6 +148,7 @@ following depending on the configs you enable:
 * eslint-plugin-react
 * eslint-plugin-react-hooks
 * eslint-plugin-import
+* eslint-plugin-unicorn
 * typescript
 
 ## Releasing
