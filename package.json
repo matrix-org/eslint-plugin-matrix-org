@@ -22,13 +22,13 @@
         "@typescript-eslint/eslint-plugin": "*",
         "@typescript-eslint/parser": "*",
         "eslint": "*",
-        "eslint-config-google": "^0.14.0",
+        "eslint-config-google": "*",
         "eslint-plugin-deprecate": "*",
         "eslint-plugin-import": "*",
         "eslint-plugin-jsx-a11y": "*",
         "eslint-plugin-react": "*",
         "eslint-plugin-react-hooks": "*",
-        "eslint-plugin-unicorn": "^44.0.2",
+        "eslint-plugin-unicorn": "*",
         "typescript": "*"
     }
 }
