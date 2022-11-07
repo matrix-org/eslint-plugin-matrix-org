@@ -12,9 +12,10 @@ This package contains several main ESLint configs for different project styles:
 - `matrix-org/typescript`: The style for TypeScript projects. It extends
   `matrix-org/javascript`.
 
-There is also a mixin config that can be used together with any of the above:
+There is also some mixin configs that can be used together with any of the above:
 
 - `matrix-org/react`: The style for React projects.
+- `matrix-org/jest`: The style for projects that use Jest for testing.
 
 # Getting started
 
@@ -101,7 +102,7 @@ Standard TypeScript with React
 }
 ```
 
-Standard TypeScript with React and jsx a11y
+Standard TypeScript with React, jsx a11y, and Jest
 ```js
 {
     plugins: [
@@ -111,6 +112,7 @@ Standard TypeScript with React and jsx a11y
         "plugin:matrix-org/typescript",
         "plugin:matrix-org/react",
         "plugin:matrix-org/a11y"
+        "plugin:matrix-org/jest"
     ]
 }
 ```
@@ -144,6 +146,7 @@ following depending on the configs you enable:
 * eslint
 * eslint-config-google
 * eslint-plugin-deprecate
+* eslint-plugin-jest
 * eslint-plugin-jsx-a11y
 * eslint-plugin-react
 * eslint-plugin-react-hooks
