@@ -31,5 +31,5 @@
         "eslint-plugin-react-hooks": "*",
         "eslint-plugin-unicorn": "*",
         "typescript": "*"
-    },
+    }
 }
