@@ -12,7 +12,7 @@ This package contains several main ESLint configs for different project styles:
 - `matrix-org/typescript`: The style for TypeScript projects. It extends
   `matrix-org/javascript`.
 
-There is also some mixin configs that can be used together with any of the above:
+There are also some mixin configs that can be used together with any of the above:
 
 - `matrix-org/react`: The style for React projects.
 - `matrix-org/jest`: The style for projects that use Jest for testing.
