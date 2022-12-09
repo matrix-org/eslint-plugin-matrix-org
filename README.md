@@ -143,12 +143,14 @@ following depending on the configs you enable:
 * @typescript-eslint/parser
 * eslint
 * eslint-config-google
+* eslint-config-prettier
 * eslint-plugin-deprecate
 * eslint-plugin-jsx-a11y
 * eslint-plugin-react
 * eslint-plugin-react-hooks
 * eslint-plugin-import
 * eslint-plugin-unicorn
+* prettier
 * typescript
 
 ## Releasing

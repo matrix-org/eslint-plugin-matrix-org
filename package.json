@@ -23,12 +23,14 @@
         "@typescript-eslint/parser": "*",
         "eslint": "*",
         "eslint-config-google": "*",
+        "eslint-config-prettier": "*",
         "eslint-plugin-deprecate": "*",
         "eslint-plugin-import": "*",
         "eslint-plugin-jsx-a11y": "*",
         "eslint-plugin-react": "*",
         "eslint-plugin-react-hooks": "*",
         "eslint-plugin-unicorn": "*",
+        "prettier": "2.8.0",
         "typescript": "*"
     }
 }
