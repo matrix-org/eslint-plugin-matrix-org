@@ -5,18 +5,17 @@ module.exports = {
         "react",
         "react-hooks",
     ],
+    extends: [
+        "prettier",
+    ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
         },
     },
     rules: {
-        "max-len": ["error", {
-            // Ignore pure JSX lines
-            ignorePattern: '^\\s*<',
-            ignoreComments: true,
-            code: 120,
-        }],
+        // handled by prettier
+        "max-len": "off",
 
         // This just uses the React plugin to help ESLint known when
         // variables have been used in JSX
@@ -35,11 +34,7 @@ module.exports = {
             beforeClosing: "never",
         }],
 
-        "react/jsx-curly-spacing": ["error", {
-            allowMultiline: true,
-            children: { when: "always" },
-            attributes: { when: "never" },
-        }],
+        "react/jsx-curly-spacing": ["error", "never", { allowMultiline: true }],
 
         "react/jsx-curly-brace-presence": ["error", "never"],
 

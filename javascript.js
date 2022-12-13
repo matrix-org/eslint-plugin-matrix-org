@@ -3,20 +3,17 @@ module.exports = {
     extends: [
         "eslint:recommended",
         "google",
+        "prettier",
     ],
     rules: {
         // Additional rules we adhere to
-        "indent": [
-            "error",
-            4,
-            {
-                SwitchCase: 1,
-            },
-        ],
-        "max-len": ["error", {
-            code: 120,
-            ignoreComments: true,
-        }],
+        
+        // handled by prettier
+        "indent": "off",
+        "space-before-function-paren": "off",
+        "brace-style": "off",
+        "max-len": "off",
+
         "curly": ["error", "multi-line"],
         "prefer-const": ["error"],
         "comma-dangle": ["error", {
@@ -26,7 +23,6 @@ module.exports = {
             exports: "always-multiline",
             functions: "always-multiline",
         }],
-        "arrow-parens": ["off"],
         "arrow-spacing": ["error"],
         "space-in-parens": ["error"],
 
@@ -51,14 +47,12 @@ module.exports = {
         // Rules we do not want from the Google style guide
         "spaced-comment": ["off"],
         "guard-for-in": ["off"],
-        "brace-style": ["error", "1tbs", {"allowSingleLine": true}],
         "block-spacing": ["off"],
         "operator-linebreak": ["off"],
         // We don't mind strange alignments in EOL comments
         "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
 
         "no-multiple-empty-lines": ["error", { "max": 1 }],
-        "object-curly-spacing": ["error", "always"],
 
         "import/order": [
             "error", {
@@ -68,5 +62,9 @@ module.exports = {
         ],
         "import/first": "error",
         "unicorn/no-instanceof-array": "error",
+
+        "quotes": ["error", "double", { avoidEscape: true }],
+        "object-curly-spacing": ["error", "always"],
+        "arrow-parens": ["error", "always"],
     },
 }

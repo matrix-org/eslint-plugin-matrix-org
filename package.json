@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-matrix-org",
-    "version": "0.7.0",
+    "version": "0.9.0",
     "description": "ESLint rules and configs used by Matrix.org projects",
     "keywords": [
         "eslint"
@@ -23,6 +23,7 @@
         "@typescript-eslint/parser": "*",
         "eslint": "*",
         "eslint-config-google": "*",
+        "eslint-config-prettier": "*",
         "eslint-plugin-deprecate": "*",
         "eslint-plugin-import": "*",
         "eslint-plugin-jest": "*",
@@ -30,6 +31,7 @@
         "eslint-plugin-react": "*",
         "eslint-plugin-react-hooks": "*",
         "eslint-plugin-unicorn": "*",
+        "prettier": "2.8.0",
         "typescript": "*"
     }
 }
