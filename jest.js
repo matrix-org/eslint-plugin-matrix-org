@@ -6,9 +6,7 @@ module.exports = {
             "error",
             {
                 additionalTestBlockFunctions: [
-                    // Tested and assertions in `before`/`beforeEach` blocks will fail
-                    // the test as expected
-                    "before",
+                    "beforeAll",
                     "beforeEach",
                 ],
             },
