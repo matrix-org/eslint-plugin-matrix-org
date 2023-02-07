@@ -8,5 +8,6 @@ module.exports = {
         "react": require("./react"),
         "typescript": require("./typescript"),
         "a11y": require("./a11y"),
+        "jest": require("./jest"),
     },
 };
