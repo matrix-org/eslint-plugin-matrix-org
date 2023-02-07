@@ -85,9 +85,12 @@ module.exports = {
             //         match: true,
             //     },
         }],
-        
+
         // Require method signatures to be explicit to help make signature changes more obvious in review
         "@typescript-eslint/explicit-function-return-type": ["error"],
         "@typescript-eslint/explicit-member-accessibility": ["error"],
-    }
-}
+
+        // Require us to be more explicit about type conversions to help prevent bugs
+        "@typescript-eslint/no-base-to-string": ["error"],
+    },
+};
