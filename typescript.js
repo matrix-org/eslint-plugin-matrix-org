@@ -92,5 +92,8 @@ module.exports = {
 
         // Require us to be more explicit about type conversions to help prevent bugs
         "@typescript-eslint/no-base-to-string": ["error"],
+
+        // Prevent invalid non-type re-exports of types, these can cause downstream build failures
+        "@typescript-eslint/consistent-type-exports": ["error"],
     },
 };
