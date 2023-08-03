@@ -31,7 +31,7 @@
         "eslint-plugin-react": "*",
         "eslint-plugin-react-hooks": "*",
         "eslint-plugin-unicorn": "*",
-        "prettier": "2.8.0",
+        "prettier": "*",
         "typescript": "*"
     }
 }
