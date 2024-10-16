@@ -1,12 +1,13 @@
 module.exports = {
     plugins: [
-        "@typescript-eslint",
+        "@stylistic",
         "matrix-org",
     ],
     extends: [
         "plugin:matrix-org/javascript",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
+        "plugin:@stylistic/disable-legacy",
     ],
     parser: "@typescript-eslint/parser",
     rules: {
@@ -14,24 +15,24 @@ module.exports = {
         // This is helpful for seeing that a function implements
         // an interface but won't be using one of it's arguments.
         "@typescript-eslint/no-unused-vars": ["error", { "args": "none", "ignoreRestSiblings": true }],
-        "@typescript-eslint/no-empty-function": ["off"],
+        "@stylistic/no-empty-function": ["off"],
 
-        "@typescript-eslint/explicit-module-boundary-types": ["off"],
-        "@typescript-eslint/ban-types": ["off"],
+        "@stylistic/explicit-module-boundary-types": ["off"],
+        "@stylistic/ban-types": ["off"],
 
         // We use IProps and IState
-        "@typescript-eslint/interface-name-prefix": ["off"],
+        "@stylistic/interface-name-prefix": ["off"],
+
+        // We rely on prettier for this
+        "@stylistic/func-call-spacing": ["off"],
 
         // Require spaces after colons and around arrows
-        "@typescript-eslint/type-annotation-spacing": ["error"],
+        "@stylistic/type-annotation-spacing": ["error"],
 
-        // `typescript-eslint` has a rule for semis which conflicts with the
-        // original ESLint core rule.
-        "semi": ["off"],
-        "@typescript-eslint/semi": ["error"],
+        "@stylistic/semi": ["error"],
 
         // Similarly, enforce semicolons between members (ie. in types / interfaces)
-        "@typescript-eslint/member-delimiter-style": ["error", {
+        "@stylistic/member-delimiter-style": ["error", {
             "multiline": {
                 "delimiter": "semi",
                 "requireLast": true,
