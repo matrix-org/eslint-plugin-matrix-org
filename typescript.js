@@ -97,5 +97,8 @@ module.exports = {
 
         // Prevent invalid non-type re-exports of types, these can cause downstream build failures
         "@typescript-eslint/consistent-type-exports": ["error"],
+
+        // Require Promise-like statements to be handled correctly
+        "@typescript-eslint/no-floating-promises": ["error"],
     },
 };
