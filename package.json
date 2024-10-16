@@ -20,6 +20,7 @@
         "@babel/eslint-parser": "*",
         "@babel/eslint-plugin": "*",
         "@stylistic/eslint-plugin": "*",
+        "@typescript-eslint/eslint-plugin": "*",
         "@typescript-eslint/parser": "*",
         "eslint": "*",
         "eslint-config-google": "*",

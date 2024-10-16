@@ -1,6 +1,7 @@
 module.exports = {
     plugins: [
         "@stylistic",
+        "@typescript-eslint",
         "matrix-org",
     ],
     extends: [
