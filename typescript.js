@@ -97,5 +97,8 @@ module.exports = {
 
         // Prevent invalid non-type re-exports of types, these can cause downstream build failures
         "@typescript-eslint/consistent-type-exports": ["error"],
+
+        // Prevent unnecessary runtime dependencies between files
+        "@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
     },
 };
