@@ -61,7 +61,7 @@ module.exports = {
             },
         ],
         "import/first": "error",
-        "unicorn/no-instanceof-array": "error",
+        "unicorn/no-instanceof-builtin-object": "error",
 
         "quotes": ["error", "double", { avoidEscape: true }],
         "object-curly-spacing": ["error", "always"],
