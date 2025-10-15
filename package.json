@@ -22,7 +22,7 @@
         "@stylistic/eslint-plugin": "*",
         "@typescript-eslint/eslint-plugin": "*",
         "@typescript-eslint/parser": "*",
-        "eslint": "*",
+        "eslint": "<9",
         "eslint-config-google": "*",
         "eslint-config-prettier": "*",
         "eslint-plugin-deprecate": "*",
@@ -31,7 +31,7 @@
         "eslint-plugin-jsx-a11y": "*",
         "eslint-plugin-react": "*",
         "eslint-plugin-react-hooks": "*",
-        "eslint-plugin-unicorn": ">=57",
+        "eslint-plugin-unicorn": "<57",
         "prettier": "*",
         "typescript": "*"
     }
