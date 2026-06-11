@@ -46,12 +46,9 @@ jobs:
         run: pnpm publish --access public --provenance
 
       - name: 🧬 Create release
-        uses: actions/create-release@v1
+        run: gh release create "$tag_name" --title "$release_name" --notes "$body" --verify-tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
+          GH_TOKEN: ${{ github.token }}
           tag_name: v${{ steps.npm-publish.outputs.version }}
           release_name: Release ${{ steps.npm-publish.outputs.version }}
           body: ${{ steps.npm-publish.outputs.version }} Release
-          draft: false
-          prerelease: false
