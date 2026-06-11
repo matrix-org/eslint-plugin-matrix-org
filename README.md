@@ -19,10 +19,13 @@ There are also some mixin configs that can be used together with any of the abov
 
 # Getting started
 
-Add this package as a development dependency:
+Add this package as a development dependency with your package manager of choice:
 
 ```
 yarn add eslint-plugin-matrix-org --dev
+# or
+pnpm add -D eslint-plugin-matrix-org
+# etc
 ```
 
 You can then add any of the following to your ESLint config:
