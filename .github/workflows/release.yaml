@@ -16,18 +16,20 @@ jobs:
   release:
     name: "Release & Publish"
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # Required for trusted publishing with OIDC
     steps:
       - name: 🧮 Checkout code
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.ELEMENT_BOT_TOKEN }}
-
+          persist-credentials: false
 
       - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093  # v6.0.8
       - name: 🔧 Set up node environment
         uses: actions/setup-node@v3
         with:
-          cache: 'pnpm'
+          registry-url: https://registry.npmjs.org/
+          package-manager-cache: false  # never use caching in release builds
 
       - name: 🛠️ Setup
         run: pnpm ci
@@ -41,11 +43,7 @@ jobs:
           git push
 
       - name: 🚀 Publish to npm
-        id: npm-publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          access: public
+        run: pnpm publish --access public --provenance
 
       - name: 🧬 Create release
         uses: actions/create-release@v1
