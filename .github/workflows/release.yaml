@@ -22,17 +22,19 @@ jobs:
         with:
           token: ${{ secrets.ELEMENT_BOT_TOKEN }}
 
+
+      - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093  # v6.0.8
       - name: 🔧 Set up node environment
         uses: actions/setup-node@v3
         with:
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: 🛠️ Setup
-        run: yarn install --pure-lockfile
+        run: pnpm ci
 
       - name: 👊 Bump version
         run: |
-          yarn version --no-git-tag-version --${{ github.event.inputs.version-bump }}
+          pnpm version --no-git-tag-version ${{ github.event.inputs.version-bump }}
           git config --global user.name 'ElementRobot'
           git config --global user.email 'releases@riot.im'
           git commit -am "${{ github.event.inputs.version-bump }} version bump"
