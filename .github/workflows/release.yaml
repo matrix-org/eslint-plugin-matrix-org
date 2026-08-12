@@ -15,43 +15,42 @@ concurrency: release
 jobs:
   release:
     name: "Release & Publish"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    permissions:
+      id-token: write  # Required for trusted publishing with OIDC
     steps:
       - name: 🧮 Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
         with:
-          token: ${{ secrets.ELEMENT_BOT_TOKEN }}
+          persist-credentials: false
 
+      - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093  # v6.0.8
       - name: 🔧 Set up node environment
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e  # v6.4.0
         with:
-          cache: 'yarn'
+          registry-url: https://registry.npmjs.org/
+          package-manager-cache: false  # never use caching in release builds
 
       - name: 🛠️ Setup
-        run: yarn install --pure-lockfile
+        run: pnpm ci
 
       - name: 👊 Bump version
         run: |
-          yarn version --no-git-tag-version --${{ github.event.inputs.version-bump }}
+          pnpm version --no-git-tag-version "$version"
           git config --global user.name 'ElementRobot'
           git config --global user.email 'releases@riot.im'
-          git commit -am "${{ github.event.inputs.version-bump }} version bump"
+          git commit -am "$version" version bump"
           git push
+        env:
+          version: ${{ github.event.inputs.version-bump }}
 
       - name: 🚀 Publish to npm
-        id: npm-publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          access: public
+        run: pnpm publish --access public --provenance
 
       - name: 🧬 Create release
-        uses: actions/create-release@v1
+        run: gh release create "$tag_name" --title "$release_name" --notes "$body" --verify-tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
+          GH_TOKEN: ${{ github.token }}
           tag_name: v${{ steps.npm-publish.outputs.version }}
           release_name: Release ${{ steps.npm-publish.outputs.version }}
           body: ${{ steps.npm-publish.outputs.version }} Release
-          draft: false
-          prerelease: false
